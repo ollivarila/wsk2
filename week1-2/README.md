@@ -14,6 +14,14 @@ This REST API is based on the API done in 2nd year course 'Basic Concepts of Web
 
 - Your task is to complete all TODOs in the code until all tests are passed
 
+## Note from Olli
+
+- I used docker compose to run this project locally.
+- `npm run dev` assumes you have docker installed, it automatically starts the containers and inits the database.
+- `npm run test` also depends on the containers being up.
+- Admin panel is also opened in `localhost:8080`, credentials are in `compose.yaml`
+- To start containers manually run `docker compose up -d` in the project root directory
+
 ## Create types/interfaces based on these objects:
 
 Cat:
