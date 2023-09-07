@@ -34,12 +34,17 @@ jobs:
           npm install
           npm run test --if-present
           npm run build --if-present
+          rm -rf node_modules
+          npm install --omit=dev
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: week2-3
+          path: |
+            week2-3/dist
+            week2-3/node_modules
+            week2-3/package.json
 
   deploy:
     runs-on: ubuntu-latest
