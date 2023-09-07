@@ -25,7 +25,6 @@ import {
 } from './catFunctions';
 
 import randomstring from 'randomstring';
-import {catGetByUser} from '../src/api/controllers/catController';
 import userModel from '../src/api/models/userModel';
 import catModel from '../src/api/models/catModel';
 import bcrypt from 'bcryptjs';
@@ -35,9 +34,15 @@ interface UserWithToken {
   token: string;
 }
 
+const DB_URL = process.env.TEST_DB_URL;
+
+if (!DB_URL) {
+  throw new Error('No DB_URL defined');
+}
+
 describe('GET /api/v1', () => {
   beforeAll(async () => {
-    await mongoose.connect(process.env.TEST_DB_URL as string);
+    await mongoose.connect(DB_URL);
     // Create admin user
     await new userModel({
       username: 'admin',
