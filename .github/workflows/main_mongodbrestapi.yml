@@ -40,8 +40,8 @@ jobs:
         with:
           name: node-app
           path: |
-            ./dist
-            ./package.json
+            week2-3/dist
+            week2-3/package.json
 
   deploy:
     runs-on: ubuntu-latest
