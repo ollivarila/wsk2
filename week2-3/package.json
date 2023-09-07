@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "lint": "eslint --fix src test",
-    "test": "NODE_ENV=test jest --detectOpenHandles --forceExit --testTimeout=2000",
+    "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:w": "NODE_ENV=test jest --watch --detectOpenHandles --forceExit"
   },
   "keywords": [],
