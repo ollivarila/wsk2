@@ -1,0 +1,17 @@
+{
+  "name": "express-api-starter-ts",
+  "version": "1.2.0",
+  "description": " A basic starter for an express.js API with Typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w3cj/express-api-starter.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.31.3"
+  }
+}

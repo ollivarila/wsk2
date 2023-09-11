@@ -11,7 +11,7 @@ on:
 
 defaults:
   run:
-    working-directory: week2-3 
+    working-directory: week2-3
 
 env:
   PORT: 3000
@@ -34,8 +34,6 @@ jobs:
           npm install
           npm run test --if-present
           npm run build --if-present
-          rm -rf node_modules
-          npm install --omit=dev
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -43,8 +41,6 @@ jobs:
           name: node-app
           path: |
             week2-3/dist
-            week2-3/node_modules
-            week2-3/package.json
 
   deploy:
     runs-on: ubuntu-latest
