@@ -40,7 +40,7 @@ jobs:
         with:
           name: node-app
           path: |
-            week4/dist.zip
+            week4/dist
 
   deploy:
     runs-on: ubuntu-latest

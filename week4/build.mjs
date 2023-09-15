@@ -13,7 +13,6 @@ async function main() {
   createBuildDir();
   await Promise.all([buildProject(), createPackageJson(), copySchemas()]); // Parallel
   await installExternalDeps(); // Depends on package.json being created
-  await createZip(); // Depends on all above
 }
 
 async function createBuildDir() {
@@ -76,12 +75,6 @@ async function installExternalDeps() {
   const cmd = 'npm install --omit=dev';
   await execPromise(cmd);
   console.log('  Done');
-}
-
-async function createZip() {
-  const cmd = `zip -r ../${outdir}.zip .`;
-  await execPromise(cmd);
-  console.log('Created zip file');
 }
 
 async function execPromise(cmd) {
