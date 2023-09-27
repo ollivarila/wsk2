@@ -55,6 +55,7 @@ jobs:
         with:
           name: node-app
       - name: unzip
+        working-directory: /home/runner/work/wsk2/wsk2
         run: unzip node-app.zip
 
       - name: 'Deploy to Azure Web App'
