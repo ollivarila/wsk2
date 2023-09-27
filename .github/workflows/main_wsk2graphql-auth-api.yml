@@ -16,6 +16,7 @@ defaults:
 env:
   PORT: 3000
   TEST_DB_URL: ${{ secrets.TEST_DB_URL }}
+  JWT_SECRET: test
 
 jobs:
   build:
